@@ -38,3 +38,57 @@ const depFirst = (root) => {
     console.log(result);
 }
 depFirst(a)
+
+// Breadth - first search
+
+const depFirst = (root) => {
+    const result = []
+    const queue = [root]
+
+    while (queue.length > 0) {
+        const current = queue.shift()
+        result.push(current.val)
+
+        if (current.left) {
+            queue.push(current.left)
+        }
+        if (current.right) {
+            queue.push(current.right)
+        }
+    }
+    console.log(result);
+    if (result.includes("e")) {
+        console.log(true);
+    }
+    else {
+        console.log(false);
+    }
+}
+depFirst(a)
+
+// Looking for a value in a binary tree
+
+const depFirst = (root) => {
+    const result = []
+    const queue = [root]
+
+    while (queue.length > 0) {
+        const current = queue.shift()
+        result.push(current.val)
+
+        if (current.left) {
+            queue.push(current.left)
+        }
+        if (current.right) {
+            queue.push(current.right)
+        }
+    }
+    console.log(result);
+    if (result.includes("e")) {
+        console.log(true);
+    }
+    else {
+        console.log(false);
+    }
+}
+depFirst(a)
